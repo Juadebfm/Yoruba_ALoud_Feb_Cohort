@@ -12,10 +12,21 @@ body {
     height: 100vh;
     @include YA-Grid-Col-2;
     color: $YA-white;
-
+    @include respond(small) {
+      grid-template-columns: 100%;
+    }
+    @include respond(medium) {
+      grid-template-columns: 100%;
+    }
     .welcome_img {
       width: 100%;
       height: 100%;
+      @include respond(small) {
+        padding: 2rem;
+      }
+      @include respond(medium) {
+        padding: 2rem;
+      }
       @include YA-FLex;
       flex-direction: column;
       p {
@@ -30,6 +41,9 @@ body {
       width: 100%;
       height: 100%;
       padding: 2.5rem;
+      @include respond(small) {
+        padding: 1.5rem;
+      }
       color: $YA-black;
       background-image: url("./assets/skin.png");
       background-size: cover;
@@ -44,6 +58,9 @@ body {
       form {
         background-color: $YA-mainTheme-light;
         padding: 2rem;
+        @include respond(small) {
+          padding: 1rem;
+        }
         border-radius: 15px;
         font-weight: 300;
         box-shadow: 0px 0px 25px 8px rgba(0, 0, 0, 0.1);
