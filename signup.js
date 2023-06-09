@@ -10,7 +10,7 @@ signUpBtn.addEventListener("click", (event) => {
   const getPassword = document.getElementById("password").value;
   const getConfirmPassword = document.getElementById("confirmPassword").value;
 
-  signUpBtn.innerText = "Loading";
+  signUpBtn.innerText = "Loading...";
   signUpBtn.classList.add("pulse");
 
   if (
@@ -38,15 +38,15 @@ signUpBtn.addEventListener("click", (event) => {
     signUpBtn.classList.remove("pulse");
   } else {
     // Create a FormData object and append form data
-    const signData = new FormData();
-    signData.append("name", getName);
-    signData.append("email", getEmail);
-    signData.append("password", getPassword);
-    signData.append("password_confirmation", getConfirmPassword);
+    const signUpData = new FormData();
+    signUpData.append("name", getName);
+    signUpData.append("email", getEmail);
+    signUpData.append("password", getPassword);
+    signUpData.append("password_confirmation", getConfirmPassword);
 
     const signReq = {
       method: "POST",
-      body: signData,
+      body: signUpData,
     };
 
     const url =
