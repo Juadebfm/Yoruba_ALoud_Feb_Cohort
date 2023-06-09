@@ -93,16 +93,16 @@ Below are the steps needed to actualize the JavaScript Code for the Sign Up sect
 - STEP 2 - Set the innerText of the button to _"Sign Up"_
 - STEP 3 - Add a _"click"_ eventListener to the button with a callback function that has _event_ as itʻs parameter.
 - STEP 4 - prevent the default behaviors of form buttons using _.preventDefault()_ function.
-- STEP 5 - Get the inputs using _getElementByID_ and we actually want to get the actually value of all 4 inputs in the signup page, donʻt forget that.
+- STEP 5 - Get the inputs using _getElementByID_ and we actually want to get the actual value of all 4 inputs in the signup page, donʻt forget that.
 - STEP 6 - At this point, set the _innerText_ value of the _signUpBtn_ to _"Loading..."_
 - STEP 7 - Then add the class _"pulse"_ to the _signUpBtn_ using the _classList_ method
-- STEP 8 - Write a _if statement_ that checks if the value of the 4 inputs are not empty strings using logical _OR_ operator, e.g _if(getName === "" || getEmail === "" ...)_
+- STEP 8 - Write an _if statement_ that checks if the value of the 4 inputs are not empty strings using logical _OR_ operator, e.g _if(getName === "" || getEmail === "" ...)_
 - STEP 9 - In the _if Statement_ block throw a sweetalert that tells the users _"All fields are required"_
 - STEP 10 - Still in the _if statement_ set the _innerText_ of the _signUpBtn_ to _"sign up"_ and remove the _"pulse"_ class from the button.
 - STEP 11 - Write an _else if_ that checks if the confirm password is equal to password, if it is _NOT_ throw a sweetalert that says _password does not match_
 - STEP 12 - Still in the _else if_ set the _innerText_ of the _signUpBtn_ to _"sign up"_ and remove the _"pulse"_ class from the button.
-- STEP 13 - Now when done with all the checks above create a variable called _signUpData_ and assign a form data object instance to it e.g _new FormData()_
-- STEP 14 - Now using the _append()_ method, append the inputs tp the _signUpData_ e.g _signUpData.append("name", getName);_
+- STEP 13 - Now when done with all the checks above, in the last _else_ block create a variable called _signUpData_ and assign a form data object instance to it e.g _new FormData()_
+- STEP 14 - Now using the _append()_ method, append the inputs to the _signUpData_ e.g _signUpData.append("name", getName);_
 - STEP 15 - Create an object with name _signReq_ and add a property _method_ with value _"POST"_ and a property _body_ with value _signUpData_
 - STEP 16 - Now create a variable _url_ and assign the [Signup Api](https://pluralcodesandbox.com/yorubalearning/api/register_admin) to it.
 - STEP 17 - Now using the fetch API, do the following:
