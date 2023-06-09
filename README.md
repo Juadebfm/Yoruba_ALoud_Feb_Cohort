@@ -19,7 +19,7 @@
 
   <img alt="Github issues" src="https://img.shields.io/github/issues/Juadebfm/yoruba_aloud_feb_cohort?color=56BEB8" />
 
-  <img alt="Github forks" src="https://img.shields.io/github/forks/Juadebfm/yoruba_aloud_feb_cohort?color=56BEB8" />
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/Juadebfm/yoruba_aloud_feb_cohort?color=56BEB8" /> -->
 
   <img alt="Github stars" src="https://img.shields.io/github/stars/Juadebfm/yoruba_aloud_feb_cohort?color=56BEB8" />
 </p>
