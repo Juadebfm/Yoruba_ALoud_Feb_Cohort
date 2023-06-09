@@ -11,6 +11,7 @@ signUpBtn.addEventListener("click", (event) => {
   const getConfirmPassword = document.getElementById("confirmPassword").value;
 
   signUpBtn.innerText = "Loading";
+  signUpBtn.classList.add("pulse");
 
   if (
     getName === "" ||
@@ -25,6 +26,7 @@ signUpBtn.addEventListener("click", (event) => {
       confirmButtonColor: "#2D85DE",
     });
     signUpBtn.innerText = "Sign Up";
+    signUpBtn.classList.remove("pulse");
   } else if (getConfirmPassword !== getPassword) {
     // Display error message if passwords do not match
     Swal.fire({
@@ -33,6 +35,7 @@ signUpBtn.addEventListener("click", (event) => {
       confirmButtonColor: "#2D85DE",
     });
     signUpBtn.innerText = "Sign Up";
+    signUpBtn.classList.remove("pulse");
   } else {
     // Create a FormData object and append form data
     const signData = new FormData();
@@ -61,7 +64,7 @@ signUpBtn.addEventListener("click", (event) => {
 
           setTimeout(() => {
             location.href = "index.html";
-          }, 3000);
+          }, 5000);
         } else {
           Swal.fire({
             icon: "info",
@@ -69,6 +72,7 @@ signUpBtn.addEventListener("click", (event) => {
             confirmButtonColor: "#2D85DE",
           });
           signUpBtn.innerText = "Sign Up";
+          signUpBtn.classList.remove("pulse");
         }
       })
       .catch((error) => console.log("error", error));
