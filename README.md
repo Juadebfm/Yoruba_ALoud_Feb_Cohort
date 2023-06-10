@@ -6,7 +6,7 @@
   <!-- <a href="https://yoruba_aloud_feb_cohort.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Yoruba Learning App</h1>
+<h1 align="center">Yoruba Learning App Admin Dashboard</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/Juadebfm/yoruba_aloud_feb_cohort?color=56BEB8">
