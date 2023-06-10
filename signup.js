@@ -68,10 +68,20 @@ signUp.addEventListener("click", (event) => {
             location.href = "index.html";
           }, 5000);
         } else {
+          // Error message
+          let errorMessage = "Registration Unsuccessful!"; // Default error message
+          if (result.message) {
+            // Extract the first error message from the result
+            const keys = Object.keys(result.message);
+            const firstErrorKey = keys[0];
+            if (result.message[firstErrorKey].length > 0) {
+              errorMessage = result.message[firstErrorKey][0];
+            }
+          }
           swal.fire({
             icon: "error",
-            text: "Registration Unsuccessful!",
-            confirmButtonText: "ok",
+            text: errorMessage,
+            confirmButtonText: "OK",
           });
           signUp.innerText = "Sign Up";
           signUp.classList.remove("pulse");
