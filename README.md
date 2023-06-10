@@ -111,6 +111,33 @@ Below are the steps needed to actualize the JavaScript Code for the Sign Up sect
 - STEP 17c - The second _.then()_ should get the _result_ and in there we should have an _if Statement_ that checks if the result status is _"success"_, if it is, throw a sweetalert that says _"success"_ showing the _result message_, then set a timeout of _5000_ seconds that sends the users to _location.href="index.html"_ i.e to the login page, else if all this is falsey, throw a sweet alert that shows _"Registration Unsuccessful!"_, after this set the _innerText_ of the _signUpBtn_ to _"sign up"_ and remove the _"pulse"_ class from the button.
 - STEP 18 - get and send the error and itʻs message in the _.catch()_ method e.g _(error) => console.log("error", error)_
 
+### Sign In Section
+
+Below are the steps needed to actualize the JavaScript Code for the Sign In section of this project.
+
+- STEP 1 - Get the signIn button by ID and assign it to a variable _signIn_ in your _signin.js_ file.
+- STEP 2 - Change the initially empty text of the button to `Sign In`.
+- STEP 3 - Add an event listener to the button with a `click` event and a function that has the `event` parameter passed into it.
+- STEP 4 - Prevent the default behavior of buttons using the `event` parameter just passed.
+- STEP 5 - Get the inputs and their values from your _index.html_ or whatever you named your signin page.
+- STEP 6 - Change the text of the signin button to `Loading...` and add the `pulse` class to the button.
+- STEP 7 - Check if the email and password are not empty strings and throw appropriate sweet alert, also at this point change the signin button text back to `Sign In` and remove the `pulse` class from the button.
+- STEP 8a - In the else block of the _if Statement_ above do the following:
+- 8b - Assign a new _FormData()_ constructor to a variable called _signInData_
+- 8c - Append the value of the email input and password input to the newly created constructor e.g _signInData.append("email", email)_
+- 8d - Create a new request object and add properties _method:"POST"_ and _body:signInData_
+- 8e - Create a variable called _URL_ and add the signin API endpoint to it, [Sign In API Endpoint](https://pluralcodesandbox.com/yorubalearning/api/admin_login)
+- STEP 9 - Use the fetch API and pass in the 2 parameters needed namely _URL_ and _signReq_
+- STEP 10 - Get the response and call the _json()_ method on it.
+- STEP 11 - Get the result and create a function that console logs the result so you can know what is coming from the backend
+- STEP 12 - Get the object coming from the backend and store it in your local storage using the _setItem()_ method, it should take 2 parameters namely (1)_"adminObj"_ and (2) _JSON.stringify(result)_ in the second parameter weʻre coverting the object from the backend to json so we can store it in our local storage.
+- STEP 13 - Get the stored _"adminObj"_ from the local storage and assign it to a variable called _getAdminObj_
+- STEP 14 - Remember that we converted the _result_ to json in `STEP 12` and named it _"adminObj"_ in our localstorage?, now we have to convert it back to an object _const adminObj = JSON.parse(getAdminObj)_
+- STEP 15 - Write a if block that checks if the _adminObj_ `hasOwnProperty` of email if so, send the user to `dashboard.html` e.g _if (adminObj.hasOwnProperty("email")) {location.href = "dashboard.html";}_
+- STEP 16 - Write a else statement that throws the appropriate `warning` `Login Unsuccessful` if the _if Block_ above is falsey.
+- STEP 17 - Change the text of the signin button to `Sign In` and remove the `pulse` class.
+- STEP 18 - Finally, catch the error that might be anywhere in this promise statements e.g _.catch((error) => console.log("Error", error));_
+
 ## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](./LICENSE) file.
