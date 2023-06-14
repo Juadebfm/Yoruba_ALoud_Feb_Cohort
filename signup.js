@@ -12,7 +12,7 @@ signUp.addEventListener("click", (event) => {
   const confirmPassword = document.getElementById("confirmPassword").value;
 
   //set the text of the button to loading
-  signUp.innerText = "Loading...";
+  signUp.innerText = "Loading....";
   signUp.classList.add("pulse");
 
   //checking
