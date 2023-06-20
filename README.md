@@ -138,6 +138,68 @@ Below are the steps needed to actualize the JavaScript Code for the Sign In sect
 - STEP 17 - Change the text of the signin button to `Sign In` and remove the `pulse` class.
 - STEP 18 - Finally, catch the error that might be anywhere in this promise statements e.g _.catch((error) => console.log("Error", error));_
 
+### Dashboard functionality
+## For display card contents 
+
+- STEP 1 - Create a function declaration.
+- STEP 2 - Get the _pageModal_ and add a style of `flex` to it, remember that the style of the pageModal is `none` before now.
+- STEP 3 - Create a variable and assign the token you stored in the local storage to it.
+- STEP 4 - Convert the variable you created above to an object using the _JSON.parse_ method.
+- STEP 5 - Take this parsed token and get the token value e.g `const token = tokenAcquired.token;`.
+- STEP 6 - Create a new Headers constructor and assign it to a variable.
+- STEP 7 - To the Headers() constructor above append the authorization and bearer token to it.
+- STEP  8 - Create a request object and add the `method` and `headers` key-value pair to it.
+- STEP 9 - Create a URL variable and then assign the API link to it. [DASHBOARD API](https://pluralcodesandbox.com/yorubalearning/api/admin/admin_dashboardapi)
+- STEP 10 - Use the fetch api and add the URL and request object created to it as a parameter.
+- STEP 11 - Then get the response and use the json() function on it
+- STEP 12 - Then get the result and do the following to the result from the endpoint...
+- STEP 13 - get the ID of the cards on the `dashboard.html` file namely `category`, `learningMaterials`, `subCategories`, `totalQuiz`, `totalStudents`, and `adminUsername`, remember, the last one is the Username situated at the navbar. E.g _const getCategory = document.getElementById("category");_
+- STEP 14 - Now, to each of them, add the corresponding result to their innerHTML e.g _getCategory.innerHTML = `${result.total_number_of_categories}`;_, check the documentation for the remain values you're displaying.
+- STEP 15 - Change the style of the pageModal to `none`.
+- catch the error that might arise using this -> _.catch((error) => console.log("error", error));_
+- STEP 16 - Call the function you just created from step 1.
+
+## To get top three students
+
+- STEP 1 - Get the top three student button from the `dashboard.html`
+- STEP 2 - To this button, add an event listener with a _click_ event and a callback function that has an _event_ params passed to it.
+- STEP 3 - Prevent the default behavior of buttons using the normal process.
+- STEP 4 - Get the studentModal and then add style `block` to it.
+- STEP 5 - Get the token stored on your local storage, convert it to an object and then get the actual token from the object e.g _const authToken = localStorage.getItem("adminObj");const tokenAcquired = JSON.parse(authToken);const token = tokenAcquired.token;_
+- STEP 6 - Create a new Header constructor and assign that to a variable
+- STEP 7 - Append this _"Authorization", `Bearer ${token}`_ to the variable you created above.
+- STEP 8 - Create a request object and add the `method` and `headers` key-value pair to it.
+- STEP 9 - Create a URL variable and then assign the API link to it. [TOP THREE STUDENT API](https://pluralcodesandbox.com/yorubalearning/api/admin/top_three_students)
+- STEP 10 - Initialize an array. I.e create an empty array literal, name it _resultData_.
+- STEP 11 - Use the fetch api and add the URL and request object created to it as a parameter.
+- STEP 12 - Then get the response and use the json() function on it
+- STEP 13 - Then get the result and do the following to the result from the endpoint...
+- STEP 14 - Get the div that will contain the dynamically created top 3 students information from your HTML, you can name it _getBestStudents_
+- STEP 15 - Write a _if statement_ that checks, if the length of the result is equal to zero, write a notif to the users _if (result.length === 0){ getBestStudents.innerHTML = "No Information Found";}_
+- STEP 16 - Use the map method on the result, when looping through the result, create a div that dynamical displays the contents necessary, remember result that is the array literal created above, we're simply just pushing items into it off the result of mapping through the result.
+
+```js
+result.map((item) => {
+          resultData += `
+          <div class="search-card">
+                    <div class="card">
+                        <p>Name:</p>
+                        <p>${item.name}</p>
+                    </div>
+	  </div>
+```
+
+NB: You're doing this for `name`, `email`, `phone_number`, `position`, and `total_score`
+
+- STEP 17 - Get the bestStudents div and assign the resultData above to it's innerHTML
+- STEP 18 - Add the classList of "show" this `show` will be a style you're pre-made that shows the hidden popup.
+- STEP 19 - Catch the error.
+- STEP 20 - Make sure that the button is working as expected, by now if you click the "TopThreeStudent" button, it should show the modal and when you click a close button, it will dissapear.
+
+## To close top three students
+
+-STEP - Create a funtion declaration, get the studentModal" and set the style to `display="none"`
+
 ## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](./LICENSE) file.
