@@ -104,7 +104,7 @@ Below are the steps needed to actualize the JavaScript Code for the Sign Up sect
 - STEP 13 - Now when done with all the checks above, in the last _else_ block create a variable called _signUpData_ and assign a form data object instance to it e.g _new FormData()_
 - STEP 14 - Now using the _append()_ method, append the inputs to the _signUpData_ e.g _signUpData.append("name", getName);_
 - STEP 15 - Create an object with name _signReq_ and add a property _method_ with value _"POST"_ and a property _body_ with value _signUpData_
-- STEP 16 - Now create a variable _url_ and assign the [Signup Api](https://pluralcodesandbox.com/yorubalearning/api/register_admin) to it.
+- STEP 16 - Now create a variable _url_ and assign the `https://pluralcodesandbox.com/yorubalearning/api/register_admin` to it.
 - STEP 17 - Now using the fetch API, do the following:
 - STEP 17a - Add the _url_ and _signReq_ to the _fetch()_
 - STEP 17b - The first _.then()_ function should receive a _response_ and should convert it to _json()_ e.g _(response) => response.json()_
@@ -126,7 +126,7 @@ Below are the steps needed to actualize the JavaScript Code for the Sign In sect
 - 8b - Assign a new _FormData()_ constructor to a variable called _signInData_
 - 8c - Append the value of the email input and password input to the newly created constructor e.g _signInData.append("email", email)_
 - 8d - Create a new request object and add properties _method:"POST"_ and _body:signInData_
-- 8e - Create a variable called _URL_ and add the signin API endpoint to it, [Sign In API Endpoint](https://pluralcodesandbox.com/yorubalearning/api/admin_login)
+- 8e - Create a variable called _URL_ and add the signin API endpoint to it, `https://pluralcodesandbox.com/yorubalearning/api/admin_login`
 - STEP 9 - Use the fetch API and pass in the 2 parameters needed namely _URL_ and _signReq_
 - STEP 10 - Get the response and call the _json()_ method on it.
 - STEP 11 - Get the result and create a function that console logs the result so you can know what is coming from the backend
@@ -150,7 +150,7 @@ Below are the steps needed to actualize the JavaScript Code for the Sign In sect
 - STEP 6 - Create a new Headers constructor and assign it to a variable.
 - STEP 7 - To the Headers() constructor above append the authorization and bearer token to it.
 - STEP  8 - Create a request object and add the `method` and `headers` key-value pair to it.
-- STEP 9 - Create a URL variable and then assign the API link to it. [DASHBOARD API](https://pluralcodesandbox.com/yorubalearning/api/admin/admin_dashboardapi)
+- STEP 9 - Create a URL variable and then assign the API link to it. `https://pluralcodesandbox.com/yorubalearning/api/admin/admin_dashboardapi`
 - STEP 10 - Use the fetch api and add the URL and request object created to it as a parameter.
 - STEP 11 - Then get the response and use the json() function on it
 - STEP 12 - Then get the result and do the following to the result from the endpoint...
@@ -170,7 +170,7 @@ Below are the steps needed to actualize the JavaScript Code for the Sign In sect
 - STEP 6 - Create a new Header constructor and assign that to a variable
 - STEP 7 - Append this _"Authorization", `Bearer ${token}`_ to the variable you created above.
 - STEP 8 - Create a request object and add the `method` and `headers` key-value pair to it.
-- STEP 9 - Create a URL variable and then assign the API link to it. [TOP THREE STUDENT API](https://pluralcodesandbox.com/yorubalearning/api/admin/top_three_students)
+- STEP 9 - Create a URL variable and then assign the API link to it. `https://pluralcodesandbox.com/yorubalearning/api/admin/top_three_students`
 - STEP 10 - Initialize an array. I.e create an empty array literal, name it _resultData_.
 - STEP 11 - Use the fetch api and add the URL and request object created to it as a parameter.
 - STEP 12 - Then get the response and use the json() function on it
