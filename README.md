@@ -138,8 +138,8 @@ Below are the steps needed to actualize the JavaScript Code for the Sign In sect
 - STEP 17 - Change the text of the signin button to `Sign In` and remove the `pulse` class.
 - STEP 18 - Finally, catch the error that might be anywhere in this promise statements e.g _.catch((error) => console.log("Error", error));_
 
-### Dashboard functionality
-## For display card contents 
+## Dashboard functionality
+### For display card contents 
 
 - STEP 1 - Create a function declaration.
 - STEP 2 - Get the _pageModal_ and add a style of `flex` to it, remember that the style of the pageModal is `none` before now.
@@ -159,7 +159,7 @@ Below are the steps needed to actualize the JavaScript Code for the Sign In sect
 - catch the error that might arise using this -> _.catch((error) => console.log("error", error));_
 - STEP 16 - Call the function you just created from step 1.
 
-## To get top three students
+### To get top three students
 
 - STEP 1 - Get the top three student button from the `dashboard.html`
 - STEP 2 - To this button, add an event listener with a _click_ event and a callback function that has an _event_ params passed to it.
@@ -196,7 +196,7 @@ NB: You're doing this for `name`, `email`, `phone_number`, `position`, and `tota
 - STEP 19 - Catch the error.
 - STEP 20 - Make sure that the button is working as expected, by now if you click the "TopThreeStudent" button, it should show the modal and when you click a close button, it will dissapear.
 
-## To close top three students
+### To close top three students
 
 -STEP - Create a funtion declaration, get the studentModal" and set the style to `display="none"`
 
