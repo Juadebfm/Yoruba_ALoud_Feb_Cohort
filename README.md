@@ -139,7 +139,8 @@ Below are the steps needed to actualize the JavaScript Code for the Sign In sect
 - STEP 18 - Finally, catch the error that might be anywhere in this promise statements e.g _.catch((error) => console.log("Error", error));_
 
 ## Dashboard functionality
-### For display card contents 
+
+### For displaying card contents 
 
 - STEP 1 - Create a function declaration.
 - STEP 2 - Get the _pageModal_ and add a style of `flex` to it, remember that the style of the pageModal is `none` before now.
